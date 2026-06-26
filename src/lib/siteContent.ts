@@ -170,8 +170,8 @@ export const siteContent = {
       title: "Contact",
       address: "123 Pet Care Lane",
       city: "Your City, ST 12345",
-      phone: "(555) 123-4567",
-      email: "hello@a2zvets.com",
+      phone: "7550291783",
+      email: "vets@gmail.com",
     },
     quickLinks: {
       title: "Quick Links",
