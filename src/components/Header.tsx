@@ -28,7 +28,7 @@ export default function Header() {
   };
 
   const handleCall = () => {
-    window.location.href = 'tel:5551234567';
+    window.location.href = 'tel:7550291783';
   };
 
   return (

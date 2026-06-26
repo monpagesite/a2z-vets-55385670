@@ -69,7 +69,7 @@ export default function Footer() {
               <li>{siteContent.footer.contact.city}</li>
               <li>
                 <a
-                  href="tel:5551234567"
+                  href="tel:7550291783"
                   className="hover:text-secondary transition-colors"
                 >
                   {siteContent.footer.contact.phone}
