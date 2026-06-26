@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Color Palette */
+  --color-primary: #2D5F4C;
+  --color-secondary: #F4A261;
+  --color-accent: #E76F51;
+  --color-background: #FAF7F2;
+  --color-surface: #FFFFFF;
+  --color-text: #2C3E3B;
+  --color-text-muted: #6B7F7A;
+  --color-border: #E8E3D8;
+}
+
+@layer base {
+  body {
+    @apply font-body text-text antialiased;
+    background-color: var(--color-background);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Scroll reveal animations */
+  .reveal-init {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Custom container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6 md:px-12;
+  }
+
+  /* Text shadows for hero over images */
+  .text-shadow {
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Focus states for accessibility */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent layout shift on scroll */
+body {
+  overflow-y: scroll;
+}
